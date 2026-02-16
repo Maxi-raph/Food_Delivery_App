@@ -37,9 +37,8 @@ const LogInPage = () => {
         
         <button className="w-full p-3 text-center border-2 border-gray-300 text-gray-700 rounded-md cursor-pointer hover:bg-gray-50 transition mt-4 flex items-center justify-center gap-2">
             <img src="/Images/Onboarding/apple-icon.svg" alt="Apple" className="w-5 h-5" />
-            Continue with Apple
+            Continue with Apple  
         </button>
-        
         <div className="relative flex items-center mt-6">
             <div className="grow border-t border-gray-300"></div>
             <span className="shrink mx-4 text-gray-500 text-sm">Or continue with</span>
