@@ -25,7 +25,7 @@ export const links: Route.LinksFunction = () => [
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Food Delivery" },
+    { title: "Chuks Kitchen" },
     { name: "description", content: "Custom website development" },
   ];
 }
