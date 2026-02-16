@@ -12,7 +12,7 @@ const OnboardingPage = ({signUpBtnClicked}:{signUpBtnClicked:React.Dispatch<Reac
         
         navigate('/onboarding/signUp')
     }
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(true);
 
     useEffect(() => {
     const handleResize = () => {

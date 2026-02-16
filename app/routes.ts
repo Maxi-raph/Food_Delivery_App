@@ -7,5 +7,5 @@ route("/onboarding", "routes/Onboarding/index.tsx",[
     route('signUp', 'routes/Onboarding/SignUpPage.tsx'),
     route('login', "routes/Onboarding/LoginPage.tsx")
 ]),
-route("home", "routes/Home/index.tsx")
+route("/home", "routes/Home/index.tsx")
 ] satisfies RouteConfig;

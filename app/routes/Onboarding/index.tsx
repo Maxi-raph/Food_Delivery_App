@@ -28,7 +28,7 @@ const isAuthPage =
               <Outlet />
         </div>
     </main>
-    <footer className={`p-6 pt-8 pb-2 bg-[#7A4B33] md:block ${isAuthPage ? 'hidden' :null}`}>
+    <footer className={`p-6 pt-8 pb-2 bg-[#7A4B33] md:block ${isAuthPage ? 'hidden' :''}`}>
         <div className='grid grid-cols-2 gap-3 place-items-center md:flex justify-evenly'>
             <div>
                 <img src="/Images/Onboarding/Chuks-Kitchen.png" alt="logo" className="w-36 h-8"/>
@@ -38,7 +38,7 @@ const isAuthPage =
             <div>
                 <h3 className="text-white text-lg mb-2">Quick Links</h3>
                 <Link to={'/home'} className=" block mb-2 text-xs text-gray-300">Home</Link>
-                <a href="" className=" block mb-2 text-xs text-gray-300">Explore</a>,
+                <a href="" className=" block mb-2 text-xs text-gray-300">Explore</a>
                 <a href="" className=" block mb-2 text-xs text-gray-300">My Order</a>
                 <a href="" className=" block mb-2 text-xs text-gray-300">Account</a>
                 <a href="" className=" block mb-2 text-xs text-gray-300">Contact</a>
@@ -65,7 +65,13 @@ const isAuthPage =
                         <a href="#">Terms of Service</a>
                     </div>
         </div>
-            <button onClick={()=>window.scrollTo(0,0)}>
+            <button 
+                  onClick={() => {
+                    if (typeof window !== "undefined") {
+                    window.scrollTo(0, 0)
+                    }
+                }}
+            >
                 <img src="/Images/Onboarding/Up-arrow.png" alt="upArrow" className="w-10 h-10 cursor-pointer fixed top-1/2 right-4"/>
             </button>
     </footer>
