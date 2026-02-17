@@ -12,11 +12,11 @@ const OnboardingPage = ({signUpBtnClicked}:{signUpBtnClicked:React.Dispatch<Reac
         
         navigate('/onboarding/signUp')
     }
-    const [isMobile, setIsMobile] = useState(true);
+    const [width, setWidth] = useState(769);
 
     useEffect(() => {
     const handleResize = () => {
-        setIsMobile(window.innerWidth < 768);
+        setWidth(window.innerWidth);
     };
     
     window.addEventListener('resize', handleResize);
@@ -30,12 +30,12 @@ const OnboardingPage = ({signUpBtnClicked}:{signUpBtnClicked:React.Dispatch<Reac
                      hover:bg-blue-500 hover:text-white"
                      onClick={()=>handleClick()}>Sign Up</button>
                 </div>
-                <div className='p-1 mt-16 max-w-xl md:mt-20'>
+                <div className='p-1 mt-12 max-w-xl lg:mt-20'>
                     <div 
                         className="bg-cover bg-center bg-no-repeat p-16 md:p-0 rounded-md md:bg-none"
                         style={{ 
-                            backgroundImage: isMobile ? `url('/Images/Onboarding/Rectangle-4317.png')` : 'none',
-                            backgroundColor:isMobile ? 'rgba(0,0,0,0.8)':'',
+                            backgroundImage: width <= 767 ? `url('/Images/Onboarding/Rectangle-4317.png')` : 'none',
+                            backgroundColor: width <= 767 ? 'rgba(0,0,0,0.8)':'',
                             backgroundBlendMode: 'overlay'
                         }}>
                     <h1 className='text-3xl font-bold text-center mb-8 text-white md:text-black'>Your Authentic Taste of Nigeria</h1>

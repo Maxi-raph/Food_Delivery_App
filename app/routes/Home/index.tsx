@@ -1,8 +1,4 @@
-import { useEffect, useState } from "react";
-import { FadeLoader } from "react-spinners"
 import type { Route } from "./+types";
-
-
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -12,13 +8,15 @@ export function meta({}: Route.MetaArgs) {
 }
 
 const HomePage = () => {
-    const [loading,setLoading] = useState(true)
-    useEffect(()=>{
-       
-    },[])
-    return ( <>
-    hdjtjdt
-    </>);
+    
+    return ( 
+        <>
+                <div className="min-h-[33.6vh]">
+                    <h1>Welcome to Chuks Kitchen!</h1>
+                    <p>Your content here</p>
+                </div>
+        </>
+    );
 }
  
 export default HomePage;

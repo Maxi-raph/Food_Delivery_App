@@ -10,8 +10,7 @@ const LogInPage = () => {
     //Function that navigates you to the Home page
     const handleSubmit = (e:React.SyntheticEvent<HTMLFormElement>)=>{
         e.preventDefault()
-        window.location.href = '/home'
-
+        navigate('/home')
     }
 
     //Function that navigates you to the sign up page
@@ -21,12 +20,6 @@ const LogInPage = () => {
    
     return (
     <section className="p-8 flex-1">
-              <Link
-      to={'/home'}
-        className="mb-8 flex justify-center p-2 bg-green-500 text-white rounded w-full"
-      >
-        Test Direct Navigation
-      </Link>
         <img src="/Images/Onboarding/Chuks-Kitchen.png" alt="logo" className="w-40 h-8 mx-auto"/>
         <h1 className="mt-2 text-gray-700 font-semibold text-2xl text-center">Login Your Account</h1>
         <div className="max-w-lg mx-auto mt-6">
