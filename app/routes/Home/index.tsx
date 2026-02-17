@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import pkg from "react-spinners"
+import { FadeLoader } from "react-spinners"
 import type { Route } from "./+types";
 
-const { FadeLoader } = pkg
+
 
 export function meta({}: Route.MetaArgs) {
   return [
