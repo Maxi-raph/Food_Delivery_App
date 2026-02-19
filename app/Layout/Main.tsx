@@ -2,6 +2,7 @@ import { Outlet } from "react-router";
 import Footer from "~/components/Footer";
 import { useState, useEffect } from "react";
 import * as Spinners from "react-spinners";
+import Nav from "~/components/NavbarUi";
 
 const MainLayout = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -18,8 +19,9 @@ const MainLayout = () => {
     return ( 
         <>
             {isLoading ? (
-                <div className="flex flex-col min-h-screen">
-                    <main className="flex-grow flex justify-center items-center">
+                <section className="flex flex-col min-h-screen">
+                    <Nav />
+                    <main className="grow flex justify-center items-center bg-gray-200">
                         {Loader ? (
                             <Loader color="#FF7A18" />
                         ) : (
@@ -27,11 +29,14 @@ const MainLayout = () => {
                         )}
                     </main>
                     <Footer />
-                </div>
+                </section>
             ) : (
                 <>
+                <section>
+                    <Nav />
                     <Outlet />
                     <Footer />
+                </section>
                 </>
             )}
         </>

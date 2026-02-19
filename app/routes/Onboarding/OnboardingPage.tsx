@@ -12,7 +12,7 @@ const OnboardingPage = ({signUpBtnClicked}:{signUpBtnClicked:React.Dispatch<Reac
         
         navigate('/onboarding/signUp')
     }
-    const [width, setWidth] = useState(769);
+    const [width, setWidth] = useState(0);
 
     useEffect(() => {
     const handleResize = () => {
@@ -23,7 +23,7 @@ const OnboardingPage = ({signUpBtnClicked}:{signUpBtnClicked:React.Dispatch<Reac
     return () => window.removeEventListener('resize', handleResize);
     }, []);
     return ( 
-            <section className="p-8 flex-1 justify-self-center">
+            <section className="py-6 px-3 flex-1 justify-self-center">
                 <div className="flex justify-between items-center relative">
                     <img src="/Images/Onboarding/Chuks-Kitchen.png" alt="logo" className="w-36 h-8"/>
                     <button className="cursor-pointer text-md text-center px-6 py-1 rounded-md border-2 border-blue-500 text-blue-500  transition
@@ -32,7 +32,7 @@ const OnboardingPage = ({signUpBtnClicked}:{signUpBtnClicked:React.Dispatch<Reac
                 </div>
                 <div className='p-1 mt-12 max-w-xl lg:mt-20'>
                     <div 
-                        className="bg-cover bg-center bg-no-repeat p-16 md:p-0 rounded-md md:bg-none"
+                        className="bg-cover bg-center bg-no-repeat py-16 px-8  md:p-0 rounded-md md:bg-none"
                         style={{ 
                             backgroundImage: width <= 767 ? `url('/Images/Onboarding/Rectangle-4317.png')` : 'none',
                             backgroundColor: width <= 767 ? 'rgba(0,0,0,0.8)':'',

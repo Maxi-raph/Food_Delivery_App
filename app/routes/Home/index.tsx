@@ -11,7 +11,7 @@ const HomePage = () => {
     
     return ( 
         <>
-                <div className="min-h-[33.6vh]">
+                <div className="min-h-[47.4vh]  bg-gray-100">
                     <h1>Welcome to Chuks Kitchen!</h1>
                     <p>Your content here</p>
                 </div>
