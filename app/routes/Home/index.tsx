@@ -11,7 +11,7 @@ export function meta({}: Route.MetaArgs) {
 }
 
 const HomePage = () => {
-    const popularCategories = [
+    const popularCategory = [
       {img:'/Images/Onboarding/Image-8.png',
        name:'Jollof Delights',
        id:1
@@ -35,6 +35,51 @@ const HomePage = () => {
       {img:'/Images/Onboarding/Image-6.png',
        name:'Jollof Delights',
        id:6
+      }
+    ]
+
+    const specialsCategory=[
+      {img:'/Images/Onboarding/Image-7.png',
+       name:'Spicy Tilapia Pepper Soup',
+       description:'A comforting and spicy soup with tender tilapia fish, a true Nigerian delicacy.',
+       id:1,
+       price:3500,
+       btnText:'Add to Cart'
+      },
+      {img:'/Images/Onboarding/Image-8.png',
+       name:'Jollof Rice And Fried Chicken',
+       description:'Our signature Jollof rice, cooked to perfection , serve with succulent fried chicken.',
+       id:2,
+       price:3500,
+       btnText:'Add to Cart'
+      },
+      {img:'/Images/Onboarding/Image-8.png',
+       name:'Jollof Rice And Fried Chicken',
+       description:'Our signature Jollof rice, cooked to perfection , serve with succulent fried chicken.',
+       id:3,
+       price:3500,
+       btnText:'Add to Cart'
+      },
+      {img:'/Images/Onboarding/Image-8.png',
+       name:'Jollof Rice And Fried Chicken',
+       description:'Our signature Jollof rice, cooked to perfection , serve with succulent fried chicken.',
+       id:4,
+       price:3500,
+       btnText:'Add to Cart'
+      },
+      {img:'/Images/Onboarding/Image-8.png',
+       name:'Jollof Rice And Fried Chicken',
+       description:'Our signature Jollof rice, cooked to perfection , serve with succulent fried chicken.',
+       id:5,
+       price:3500,
+       btnText:'Add to Cart'
+      },
+      {img:'/Images/Onboarding/image-9.png',
+       name:'Egusi Soup & Pounded Yam',
+       description:'Rich and savory Egusi soup with assorted meats, paired with freshly pounded yam.',
+       id:1,
+       price:3500,
+       btnText:'Add to Cart'
       }
     ]
     return ( 
@@ -64,10 +109,33 @@ const HomePage = () => {
           <section className="bg-gray-200 py-16 px-12">
             <h2 className="text-xl text-center mb-6 font-bold">Popular Categories</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-              {popularCategories.map(item =>(
+              {popularCategory.map(item =>(
                   <MenuCard item={item}/>
               ))}
             </div>
+          </section>
+          <section className="bg-gray-200 py-16 px-12">
+            <h2 className="text-xl text-center mb-6 font-bold">Chef's Specials</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+              {specialsCategory.map(item =>(
+                  <MenuCard item={item}/>
+              ))}
+            </div>
+          </section>
+          <section 
+            className="bg-cover bg-center bg-no-repeat px-8 py-24"
+            style={{ 
+            backgroundImage: `url('/Images/Onboarding/bg-2.jpeg')`,
+            backgroundColor: 'rgba(0,0,0,0.8)',
+            backgroundBlendMode: 'overlay'
+          }}>
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Introducing Our New Menu Additions
+            </h1>
+            <p className="text-white mb-8 text-2xl max-w-3xl">Explore exciting new dishes, crafted with the freshest ingredients and authentic Nigerian flavors. Limited time offer!</p>
+            <Link to={'/home'} className="text-white py-3 px-5
+             text-center bg-[#FF7A18] rounded-md">
+            Discover what's new</Link>
           </section>
         </>
     );
