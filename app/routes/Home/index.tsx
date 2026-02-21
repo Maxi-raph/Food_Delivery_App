@@ -1,7 +1,7 @@
 import { HiSearch } from "react-icons/hi";
 import type { Route } from "./+types";
 import { Link } from 'react-router'
-import CategoriesCard from "~/components/CategoriesCard";
+import MenuCard from "~/components/MenuCard";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -63,9 +63,9 @@ const HomePage = () => {
           </section>
           <section className="bg-gray-200 py-16 px-12">
             <h2 className="text-xl text-center mb-6 font-bold">Popular Categories</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
               {popularCategories.map(item =>(
-                  <CategoriesCard item={item}/>
+                  <MenuCard item={item}/>
               ))}
             </div>
           </section>
