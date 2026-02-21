@@ -10,34 +10,34 @@ const Nav = () => {
 
     return (<>
         {/* Desktop Navigation */} 
-        <div className='hidden md:flex py-3 px-6  space-x-20 justify-between items-center'>
+        <div className='hidden md:flex py-3 px-6  space-x-20 justify-between items-center shadow-md border-b border-gray-400'>
             <img src="/Images/Onboarding/Chuks-Kitchen.png" alt="logo" className="w-36 h-8"/>
             <div className='flex flex-1 items-center justify-between'>
                 <NavLink to={'/home'} className={({isActive})=>(
                     isActive 
-                    ? 'text-[#FF7A18] text-sm md:text-md'
+                    ? 'text-[#FF7A18] md:text-md'
                     : ''
                 )}>Home</NavLink>
                 <NavLink to={'/onboarding/login'} className={({isActive})=>(
                     isActive 
-                    ? 'text-[#FF7A18] text-sm md:text-md'
-                    : 'hover:text-[#FF7A18] text-sm md:text-md'
+                    ? 'text-[#FF7A18]'
+                    : 'hover:text-[#FF7A18]'
                 )}>Explore</NavLink>
                 <NavLink to={'/onboarding/signUp'} className={({isActive})=>(
                     isActive 
-                    ? 'text-[#FF7A18] text-sm md:text-md'
-                    : 'hover:text-[#FF7A18] text-sm md:text-md'
+                    ? 'text-[#2a1f17]'
+                    : 'hover:text-[#FF7A18]'
                 )}>My Orders</NavLink>
                 <NavLink to={'/onboarding'} className={({isActive})=>(
                     isActive 
-                    ? 'text-[#FF7A18] text-sm md:text-md'
-                    : 'hover:text-[#FF7A18] text-sm md:text-md'
+                    ? 'text-[#FF7A18]'
+                    : 'hover:text-[#FF7A18]'
                 )}>Account</NavLink>
             </div>
             <Link to={'/onboarding/login'} className='text-white py-1 px-6 rounded-md bg-[#FF7A18]'>Login</Link>
         </div>
         {/* Mobile Navigation */} 
-        <div className='flex md:hidden py-3 px-6 justify-between items-center relative'>
+        <div className='flex md:hidden py-3 px-6 justify-between items-center relative shadow-lg border-b border-gray-400'>
             <img src="/Images/Onboarding/Chuks-Kitchen.png" alt="logo" className="w-36 h-8"/>
             {!isNavOpen 
             ? <HiMenu  size={24} className={`cursor-pointer `} onClick={()=>showNav()}/>
@@ -49,26 +49,26 @@ const Nav = () => {
                     <div className='flex w-full flex-col items-center space-y-6'>
                         <NavLink to={'/home'} className={({isActive})=>(
                             isActive 
-                            ? 'text-[#FF7A18] text-sm'
-                            : 'hover:text-[#FF7A18] text-sm text-white'
+                            ? 'text-[#FF7A18]'
+                            : 'hover:text-[#FF7A18] text-white'
                         )} onClick={()=>showNav()}>Home</NavLink>
                         <NavLink to={'/onboarding/login'} className={({isActive})=>(
                             isActive 
-                            ? 'text-[#FF7A18] text-sm'
-                            : 'hover:text-[#FF7A18] text-sm text-white'
+                            ? 'text-[#FF7A18]'
+                            : 'hover:text-[#FF7A18] text-white'
                         )} onClick={()=>showNav()}>Explore</NavLink>
                         <NavLink to={'/onboarding/signUp'} className={({isActive})=>(
                             isActive 
-                            ? 'text-[#FF7A18] text-sm'
-                            : 'hover:text-[#FF7A18] text-sm text-white'
+                            ? 'text-[#FF7A18]'
+                            : 'hover:text-[#FF7A18] text-white'
                         )} onClick={()=>showNav()}>My Orders</NavLink>
                         <NavLink to={'/onboarding'} className={({isActive})=>(
                             isActive 
-                            ? 'text-[#FF7A18] text-sm'
-                            : 'hover:text-[#FF7A18] text-sm text-white'
+                            ? 'text-[#FF7A18]'
+                            : 'hover:text-[#FF7A18] text-white'
                         )} onClick={()=>showNav()}>Account</NavLink>
                         <Link to={'/onboarding/login'} className='text-white py-1 px-6 rounded-md
-                         bg-[#FF7A18] hover:bg-[#ff6702] text-center text-sm w-full'>
+                         bg-[#FF7A18] hover:bg-[#ff6702] text-center w-full'>
                         Login</Link>
                     </div>
                 </div>

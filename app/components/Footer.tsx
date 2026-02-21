@@ -16,24 +16,24 @@ const Footer = ({isAuthPage, scrollHeight}:FooterProps) => {
                 </div>
                 <div>
                     <h3 className="text-white text-lg mb-2">Quick Links</h3>
-                    <Link to={'/home'} className=" block mb-2 text-xs text-gray-300 text-center">Home</Link>
-                    <a href="" className=" block mb-2 text-xs text-gray-300 text-center">Explore</a>
-                    <a href="" className=" block mb-2 text-xs text-gray-300 text-center">My Order</a>
-                    <a href="" className=" block mb-2 text-xs text-gray-300 text-center">Account</a>
-                    <a href="" className=" block mb-2 text-xs text-gray-300 text-center">Contact</a>
+                    <Link to={'/home'} className=" block mb-2 text-sm text-gray-300 text-center">Home</Link>
+                    <a href="" className=" block mb-2 text-sm text-gray-300 text-center">Explore</a>
+                    <a href="" className=" block mb-2 text-sm text-gray-300 text-center">My Order</a>
+                    <a href="" className=" block mb-2 text-sm text-gray-300 text-center">Account</a>
+                    <a href="" className=" block mb-2 text-sm text-gray-300 text-center">Contact</a>
                 </div>
                 <div>
                     <h3 className="text-white text-lg mb-2">Contact Us</h3>
-                    <p className="text-gray-300 text-xs mb-2">+234 801 234 5678</p>
-                    <p className="text-gray-300 text-xs mb-2">hello@chukskitchen.com</p>
-                    <p className="text-gray-300 text-xs mb-2">123 Taste Blvd,Lagos,Nigeria</p>
+                    <p className="text-gray-300 text-sm mb-2">+234 801 234 5678</p>
+                    <p className="text-gray-300 text-sm mb-2">hello@chukskitchen.com</p>
+                    <p className="text-gray-300 text-sm mb-2">123 Taste Blvd,Lagos,Nigeria</p>
                 </div>
                 <div>
                     <h3 className="text-white text-lg mb-2">Socials</h3>
-                    <a href="" className=" block mb-2 text-xs text-gray-300">Facebook</a>
-                    <a href="" className=" block mb-2 text-xs text-gray-300">Twitter</a>
-                    <a href="" className=" block mb-2 text-xs text-gray-300">LinkedIn</a>
-                    <a href="" className=" block mb-2 text-xs text-gray-300">Instagram</a>
+                    <a href="" className=" block mb-2 text-sm text-gray-300">Facebook</a>
+                    <a href="" className=" block mb-2 text-sm text-gray-300">Twitter</a>
+                    <a href="" className=" block mb-2 text-sm text-gray-300">LinkedIn</a>
+                    <a href="" className=" block mb-2 text-sm text-gray-300">Instagram</a>
                 </div>
             </div>
             <div className="mt-12">

@@ -53,11 +53,11 @@ const HomePage = () => {
             <Link to={'/home'} className="text-white py-3 px-5
              text-center bg-[#FF7A18] rounded-md">
             Discover what's new</Link>
-            <div className="absolute -bottom-4 flex justify-center w-full">
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-full">
               <div className="relative w-full flex justify-center">
-                <HiSearch className="absolute top-3 left-[19.8%] text-xl" color="gray"/>
+                <HiSearch className="absolute top-3 left-[17.2%] md:left-[19.8%] text-xl" color="gray"/>
                 <input type="text" placeholder="What are you craving for today?"
-                className="w-[62%] pl-8 pr-3 py-2 rounded-md shadow-md bg-white focus:ring-gray-300 focus:ring-2 outline-0"/>
+                className="w-[68%] md:w-[62%] pl-8 pr-3 py-2 rounded-md shadow-md bg-white focus:ring-[#FF7A18] focus:ring-2 outline-0"/>
               </div>
             </div>
           </section>
