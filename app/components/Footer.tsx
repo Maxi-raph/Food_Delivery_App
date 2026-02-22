@@ -44,7 +44,7 @@ const Footer = ({isAuthPage, scrollHeight}:FooterProps) => {
                             <a href="#" className="text-blue-400">Terms of Service</a>
                     </div>
             </div>
-                {scrollHeight && scrollHeight > 150 && <button 
+                {scrollHeight && scrollHeight > 300 && <button 
                     onClick={() => {
                         if (typeof window !== "undefined") {
                         window.scrollTo(0, 0)

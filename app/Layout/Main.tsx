@@ -6,15 +6,30 @@ import Nav from "~/components/NavbarUi";
 
 const MainLayout = () => {
     const [isLoading, setIsLoading] = useState(true);
+    const [scrollHeight,setScrollHeight] = useState(0)
     const Loader = Spinners?.FadeLoader;
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false);
         }, 3000);
-
-        return () => clearTimeout(timer);
+        
+        const handleScroll = () => {
+                setScrollHeight(window.scrollY);
+        };
+            
+        window.addEventListener('scroll', handleScroll);
+            
+            // Cleanup
+            return ()=>{
+                window.removeEventListener('scroll', handleScroll);
+                clearTimeout(timer);  
+            } 
     }, []);
+          // Use useEffect for window scroll to show the upArrow icon so the user can scroll up just by clicking it
+          useEffect(() => {
+
+        }, []);
     
     return ( 
         <>
@@ -35,7 +50,7 @@ const MainLayout = () => {
                 <section>
                     <Nav />
                     <Outlet />
-                    <Footer />
+                    <Footer scrollHeight={scrollHeight}/>
                 </section>
                 </>
             )}
