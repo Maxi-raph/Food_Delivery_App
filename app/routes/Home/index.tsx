@@ -95,7 +95,7 @@ const HomePage = () => {
               The Heart of Nigerian Home Cooking
             </h1>
             <p className="text-white mb-8 text-2xl">Handcrafted with passion, delivered with care.</p>
-            <Link to={'/home'} className="text-white py-3 px-5
+            <Link to={'/explore'} className="text-white py-3 px-5
              text-center bg-[#FF7A18] rounded-md">
             Discover what's new</Link>
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-full">
@@ -133,7 +133,7 @@ const HomePage = () => {
               Introducing Our New Menu Additions
             </h1>
             <p className="text-white mb-8 text-2xl max-w-3xl">Explore exciting new dishes, crafted with the freshest ingredients and authentic Nigerian flavors. Limited time offer!</p>
-            <Link to={'/home'} className="text-white py-3 px-5
+            <Link to={'/explore'} className="text-white py-3 px-5
              text-center bg-[#FF7A18] rounded-md">
             Discover what's new</Link>
           </section>

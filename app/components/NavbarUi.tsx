@@ -10,7 +10,7 @@ const Nav = () => {
 
     return (<>
         {/* Desktop Navigation */} 
-        <div className='hidden md:flex py-3 px-6  space-x-20 justify-between items-center shadow-md border-b border-gray-400'>
+        <div className='hidden md:flex py-3 px-6  space-x-20 justify-between items-center  fixed bg-white w-full top-0 left-0 z-24 shadow-xl'>
             <img src="/Images/Onboarding/Chuks-Kitchen.png" alt="logo" className="w-36 h-8"/>
             <div className='flex flex-1 items-center justify-between'>
                 <NavLink to={'/home'} className={({isActive})=>(
@@ -18,7 +18,7 @@ const Nav = () => {
                     ? 'text-[#FF7A18] md:text-md'
                     : ''
                 )}>Home</NavLink>
-                <NavLink to={'/onboarding/login'} className={({isActive})=>(
+                <NavLink to={'/explore'} className={({isActive})=>(
                     isActive 
                     ? 'text-[#FF7A18]'
                     : 'hover:text-[#FF7A18]'
@@ -37,14 +37,14 @@ const Nav = () => {
             <Link to={'/onboarding/login'} className='text-white py-1 px-6 rounded-md bg-[#FF7A18]'>Login</Link>
         </div>
         {/* Mobile Navigation */} 
-        <div className='flex md:hidden py-3 px-6 justify-between items-center relative shadow-lg border-b border-gray-400'>
+        <div className='flex md:hidden py-3 px-6 justify-between items-center fixed bg-white w-full top-0 left-0 z-24 shadow-xl'>
             <img src="/Images/Onboarding/Chuks-Kitchen.png" alt="logo" className="w-36 h-8"/>
-            {!isNavOpen 
+            {!isNavOpen  
             ? <HiMenu  size={24} className={`cursor-pointer `} onClick={()=>showNav()}/>
             : <HiX  size={24} className={`cursor-pointer `} onClick={()=>showNav()}/>
             }
             
-                <div className={`p-6 rounded-lg w-64 shadow-lg border border-gray-400 bg-gray-300/30 backdrop-blur-sm absolute z-10 top-15 right-2 
+                <div className={`p-6 w-full shadow-lg border border-gray-400 bg-gray-300/30 backdrop-blur-sm absolute z-10 top-14 right-0
                     transition-translate duration-600 ${!isNavOpen ? '-translate-y-100' : 'translate-y-0'}`}>
                     <div className='flex w-full flex-col items-center space-y-6'>
                         <NavLink to={'/home'} className={({isActive})=>(
@@ -57,7 +57,7 @@ const Nav = () => {
                             ? 'text-[#FF7A18]'
                             : 'hover:text-[#FF7A18] text-white'
                         )} onClick={()=>showNav()}>Explore</NavLink>
-                        <NavLink to={'/onboarding/signUp'} className={({isActive})=>(
+                        <NavLink to={'/explore'} className={({isActive})=>(
                             isActive 
                             ? 'text-[#FF7A18]'
                             : 'hover:text-[#FF7A18] text-white'
@@ -68,7 +68,7 @@ const Nav = () => {
                             : 'hover:text-[#FF7A18] text-white'
                         )} onClick={()=>showNav()}>Account</NavLink>
                         <Link to={'/onboarding/login'} className='text-white py-1 px-6 rounded-md
-                         bg-[#FF7A18] hover:bg-[#ff6702] text-center w-full'>
+                         bg-[#FF7A18] hover:bg-[#ff6702] text-center w-24'>
                         Login</Link>
                     </div>
                 </div>
