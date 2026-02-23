@@ -17,7 +17,7 @@ const Footer = ({isAuthPage, scrollHeight}:FooterProps) => {
                 <div>
                     <h3 className="text-white text-lg mb-2">Quick Links</h3>
                     <Link to={'/home'} className=" block mb-2 text-sm text-gray-300 text-center">Home</Link>
-                    <a href="" className=" block mb-2 text-sm text-gray-300 text-center">Explore</a>
+                    <Link to={'/explore'} className=" block mb-2 text-sm text-gray-300 text-center">Explore</Link>
                     <a href="" className=" block mb-2 text-sm text-gray-300 text-center">My Order</a>
                     <a href="" className=" block mb-2 text-sm text-gray-300 text-center">Account</a>
                     <a href="" className=" block mb-2 text-sm text-gray-300 text-center">Contact</a>
