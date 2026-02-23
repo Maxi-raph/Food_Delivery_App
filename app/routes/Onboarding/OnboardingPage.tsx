@@ -32,12 +32,9 @@ const OnboardingPage = ({signUpBtnClicked}:{signUpBtnClicked:React.Dispatch<Reac
                 </div>
                 <div className='p-1 mt-12 max-w-xl lg:mt-20'>
                     <div 
-                        className="bg-cover bg-center bg-no-repeat py-16 px-8  md:p-0 rounded-md md:bg-none"
-                        style={{ 
-                            backgroundImage: width <= 767 ? `url('/Images/Onboarding/Rectangle-4317.png')` : 'none',
-                            backgroundColor: width <= 767 ? 'rgba(0,0,0,0.8)':'',
-                            backgroundBlendMode: 'overlay'
-                        }}>
+                        className="md:bg-none bg-cover bg-center bg-black/60 bg-blend-overlay 
+                        bg-[url('/Images/Onboarding/Rectangle-4317.png')] bg-no-repeat py-16 px-8 
+                         md:p-0 rounded-md md:bg-none md:bg-blend-normal md:bg-transparent">   
                     <h1 className='text-3xl font-bold text-center mb-8 text-white md:text-black'>Your Authentic Taste of Nigeria</h1>
                     <p className="text-white md:text-black text-center leading-relaxed">
                         Experience homemade flavors delivered fresh to your desk or home. 

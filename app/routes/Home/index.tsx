@@ -2,6 +2,7 @@ import { HiSearch } from "react-icons/hi";
 import type { Route } from "./+types";
 import { Link } from 'react-router'
 import MenuCard from "~/components/MenuCard";
+import { useState } from "react";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -88,6 +89,16 @@ const HomePage = () => {
        btnVariant:'text'
       }
     ]
+    const [showPopularCount, setShowPopularCount] = useState(3);
+    const [showSpecialsCount, setShowSpecialsCount] = useState(3);
+    const popularSlice = popularCategory.slice(0,showPopularCount);
+    const specialsSlice = specialsCategory.slice(0,showSpecialsCount);
+    const showMorePopular = ()=>{
+      setShowPopularCount(prev=>Math.min(prev + 3, popularCategory.length));
+    }
+    const showMoreSpecials = ()=>{
+      setShowSpecialsCount(prev=>Math.min(prev + 3, specialsCategory.length));
+    }
     return ( 
         <>
           <section 
@@ -114,19 +125,43 @@ const HomePage = () => {
           </section>
           <section className="bg-gray-200 py-16 px-12">
             <h2 className="text-xl text-center mb-6 font-bold">Popular Categories</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+            {/*Desktop popular categories  */}
+            <div className="hidden md:grid md:grid-cols-3 gap-12">
               {popularCategory.map(item =>(
                   <MenuCard item={item}/>
               ))}
             </div>
+            {/*Mobile popular categories  */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+              {popularSlice.map(item =>(
+                  <MenuCard item={item}/>
+              ))}
+            </div>
+            {showPopularCount < popularCategory.length && (
+              <div className="flex justify-center mt-8">
+                <button onClick={showMorePopular} className="px-4 py-2 bg-[#FF7A18] text-white rounded-md cursor-pointer">Show More</button>
+              </div>
+            )}
           </section>
           <section className="bg-gray-200 py-16 px-12">
             <h2 className="text-xl text-center mb-6 font-bold">Chef's Specials</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+            <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+              {/*Desktop chef's specials */}
               {specialsCategory.map(item =>(
                   <MenuCard item={item}/>
               ))}
             </div>
+            {/*Mobile chef's specials  */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+              {specialsSlice.map(item =>(
+                  <MenuCard item={item}/>
+              ))}
+            </div>
+            {showSpecialsCount < specialsCategory.length && (
+              <div className="flex justify-center mt-8">
+                <button onClick={showMoreSpecials} className="px-4 py-2 bg-[#FF7A18] text-white rounded-md cursor-pointer">Show More</button>
+              </div>
+            )}
           </section>
           <section 
             className="bg-cover bg-center bg-no-repeat px-8 py-24"
