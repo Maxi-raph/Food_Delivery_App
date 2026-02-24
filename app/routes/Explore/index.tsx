@@ -174,7 +174,7 @@ const ExplorePage = () => {
                 <h2 className="text-xl mb-6 font-bold">{selectedCategory}</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
                     {categories.filter(cat => cat.category === selectedCategory).map(item =>(
-                        <MenuCard item={item}/>
+                        <MenuCard item={item} category={categories}/>
                     ))}
                     {categories.filter(cat => cat.category === selectedCategory).length === 0 && (
                         <p className="text-gray-500 text-center col-span-full">No items found in this category.</p>

@@ -7,7 +7,7 @@ type FooterProps = {
 
 const Footer = ({isAuthPage, scrollHeight}:FooterProps) => {
     return ( 
-        <footer className={` pt-8 pb-2 bg-[#7A4B33] md:block ${isAuthPage && isAuthPage ? 'hidden' :''}`}>
+        <footer className={` pt-8  px-8 pb-2 bg-[#7A4B33] md:block ${isAuthPage && isAuthPage ? 'hidden' :''}`}>
             <div className='grid grid-cols-2 gap-12 place-items-center md:flex justify-evenly'>
                 <div>
                     <img src="/Images/Onboarding/Chuks-Kitchen.png" alt="logo" className="w-36 h-8 mb-3"/>
@@ -18,7 +18,7 @@ const Footer = ({isAuthPage, scrollHeight}:FooterProps) => {
                     <h3 className="text-white text-lg mb-2">Quick Links</h3>
                     <Link to={'/home'} className=" block mb-2 text-sm text-gray-300 text-center">Home</Link>
                     <Link to={'/explore'} className=" block mb-2 text-sm text-gray-300 text-center">Explore</Link>
-                    <a href="" className=" block mb-2 text-sm text-gray-300 text-center">My Order</a>
+                    <Link to={'/my-orders'} className=" block mb-2 text-sm text-gray-300 text-center">My orders</Link>
                     <a href="" className=" block mb-2 text-sm text-gray-300 text-center">Account</a>
                     <a href="" className=" block mb-2 text-sm text-gray-300 text-center">Contact</a>
                 </div>
@@ -51,7 +51,7 @@ const Footer = ({isAuthPage, scrollHeight}:FooterProps) => {
                         }
                     }}
                 >
-                    <img src="/Images/Onboarding/Up-arrow.png" alt="upArrow" className="w-10 h-10 cursor-pointer fixed top-1/2 right-4"/>
+                    <img src="/Images/Onboarding/Up-arrow.png" alt="upArrow" className="w-10 h-10 cursor-pointer fixed bottom-16 right-4"/>
                 </button>}
     </footer>
      );

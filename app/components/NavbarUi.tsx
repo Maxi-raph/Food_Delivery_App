@@ -23,7 +23,7 @@ const Nav = () => {
                     ? 'text-[#FF7A18]'
                     : 'hover:text-[#FF7A18]'
                 )}>Explore</NavLink>
-                <NavLink to={'/onboarding/signUp'} className={({isActive})=>(
+                <NavLink to={'/my-orders'} className={({isActive})=>(
                     isActive 
                     ? 'text-[#2a1f17]'
                     : 'hover:text-[#FF7A18]'
@@ -57,7 +57,7 @@ const Nav = () => {
                             ? 'text-[#FF7A18]'
                             : 'hover:text-[#FF7A18] text-white'
                         )} onClick={()=>showNav()}>Explore</NavLink>
-                        <NavLink to={'/onboarding'} className={({isActive})=>(
+                        <NavLink to={'/my-orders'} className={({isActive})=>(
                             isActive 
                             ? 'text-[#FF7A18]'
                             : 'hover:text-[#FF7A18] text-white'

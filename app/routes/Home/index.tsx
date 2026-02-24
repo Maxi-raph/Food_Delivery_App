@@ -83,12 +83,13 @@ const HomePage = () => {
       {img:'/Images/Onboarding/image-9.png',
        name:'Egusi Soup & Pounded Yam',
        description:'Rich and savory Egusi soup with assorted meats, paired with freshly pounded yam.',
-       id:1,
+       id:6,
        price:3500,
        btnText:'Add to Cart',
        btnVariant:'text'
       }
     ]
+
     const [showPopularCount, setShowPopularCount] = useState(3);
     const [showSpecialsCount, setShowSpecialsCount] = useState(3);
     const popularSlice = popularCategory.slice(0,showPopularCount);
@@ -128,17 +129,21 @@ const HomePage = () => {
             {/*Desktop popular categories  */}
             <div className="hidden md:grid md:grid-cols-3 gap-12">
               {popularCategory.map(item =>(
-                  <MenuCard item={item}/>
+                  <div key={item.id}>
+                    <MenuCard item={item} category={popularCategory}/>
+                  </div>
               ))}
             </div>
             {/*Mobile popular categories  */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:hidden gap-12">
               {popularSlice.map(item =>(
-                  <MenuCard item={item}/>
+                  <div key={item.id}>
+                    <MenuCard item={item} category={popularCategory}/>
+                  </div>            
               ))}
             </div>
             {showPopularCount < popularCategory.length && (
-              <div className="flex justify-center mt-8">
+              <div className="flex justify-center md:hidden mt-8">
                 <button onClick={showMorePopular} className="px-4 py-2 bg-[#FF7A18] text-white rounded-md cursor-pointer">Show More</button>
               </div>
             )}
@@ -148,17 +153,21 @@ const HomePage = () => {
             <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
               {/*Desktop chef's specials */}
               {specialsCategory.map(item =>(
-                  <MenuCard item={item}/>
+                  <div key={item.id}>
+                    <MenuCard item={item} category={specialsCategory}/>
+                  </div>
               ))}
             </div>
             {/*Mobile chef's specials  */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:hidden gap-12">
               {specialsSlice.map(item =>(
-                  <MenuCard item={item}/>
+                  <div key={item.id}>
+                    <MenuCard item={item} category={specialsCategory}/>
+                  </div>
               ))}
             </div>
             {showSpecialsCount < specialsCategory.length && (
-              <div className="flex justify-center mt-8">
+              <div className="flex justify-center md:hidden mt-8">
                 <button onClick={showMoreSpecials} className="px-4 py-2 bg-[#FF7A18] text-white rounded-md cursor-pointer">Show More</button>
               </div>
             )}
