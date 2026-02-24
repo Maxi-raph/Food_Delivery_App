@@ -7,8 +7,8 @@ type FooterProps = {
 
 const Footer = ({isAuthPage, scrollHeight}:FooterProps) => {
     return ( 
-        <footer className={` pt-8  px-8 pb-2 bg-[#7A4B33] md:block ${isAuthPage && isAuthPage ? 'hidden' :''}`}>
-            <div className='grid grid-cols-2 gap-12 place-items-center md:flex justify-evenly'>
+        <footer className={` pt-8 pb-2 bg-[#7A4B33] md:block ${isAuthPage && isAuthPage ? 'hidden' :''}`}>
+            <div className='grid grid-cols-2 gap-12 place-items-center md:flex justify-evenly  px-8'>
                 <div>
                     <img src="/Images/Onboarding/Chuks-Kitchen.png" alt="logo" className="w-36 h-8 mb-3"/>
                     <p className="text-white text-sm max-w-41.25 leading-relaxed">Bringing the authentic flavors of 
