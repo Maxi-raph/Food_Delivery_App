@@ -1,4 +1,5 @@
-import { HiPlus } from "react-icons/hi";
+import { useState } from "react";
+import { HiCheck, HiPlus } from "react-icons/hi";
 import { useCart } from "~/Context/CartContext";
 
 interface itemCategory{
@@ -27,14 +28,17 @@ interface Category{
 
 const MenuCard = ({item, category}:
    {item:itemCategory, category:Category[]}) => {
+    const [isAdded,setIsAdded] = useState<boolean>(false)
     const {items, addItem} = useCart();
     const addToCart = (item:itemCategory)=>{
       let obj = category.filter(cat => cat.id === item.id)
       let product = obj[0]
-      console.log(product,items);
-      
-      addItem(product)
-            console.log(product,items);
+
+      !isAdded && addItem(product)
+      setIsAdded(prev => true)
+      setTimeout(()=>{
+          setIsAdded(prev => false)
+      },1000)
 
     }
     return ( 
@@ -46,8 +50,9 @@ const MenuCard = ({item, category}:
                   <div className="flex justify-between w-full px-4 space-x-6 items-center mt-4 mb-2">
                     {item.price && <span className="text-[#FF7A18] font-bold">{`₦${item.price}`}</span>}
                     {item.btnVariant === 'text' && item.btnText && <button className="text-white py-1 px-4 rounded-md bg-[#FF7A18] cursor-pointer text-sm"
-                    onClick={()=>addToCart(item)}>{item.btnText}</button>}
-                    {item.btnVariant === 'icon' && <button className="text-white py-2 px-2 rounded-full bg-[#FF7A18] cursor-pointer"><HiPlus /></button>}
+                    onClick={()=>addToCart(item)}>{!isAdded && item.btnText} { isAdded &&  <HiCheck className="text-xl"/>}</button>}
+                    {item.btnVariant === 'icon' && <button className="text-white py-2 px-2 rounded-full bg-[#FF7A18] cursor-pointer"
+                    onClick={()=>addToCart(item)}>{!isAdded && <HiPlus />} { isAdded &&  <HiCheck className="text-xl"/>}</button>}
                   </div>
             </div>
      );

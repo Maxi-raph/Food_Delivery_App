@@ -1,5 +1,13 @@
 import { useState } from "react";
+import type { Route } from "./+types";
 import MenuCard from "~/components/MenuCard";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Chuks Kitchen - Home" },
+    { name: "description", content: "Welcome to your dashboard" },
+  ];
+}
 
 const ExplorePage = () => {
 

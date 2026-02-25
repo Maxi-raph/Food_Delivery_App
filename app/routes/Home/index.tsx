@@ -15,27 +15,27 @@ const HomePage = () => {
     const popularCategory = [
       {img:'/Images/Onboarding/Image-8.png',
        name:'Jollof Delights',
-       id:1
+       id:15
       },
       {img:'/Images/Onboarding/Image-2.png',
        name:'Swallow & Soups',
-       id:2
+       id:16
       },
       {img:'/Images/Onboarding/Image-3.png',
        name:'Grills & BBQ',
-       id:3
+       id:17
       },
       {img:'/Images/Onboarding/Image-4.png',
        name:'Sweet Treats',
-       id:4
+       id:18
       },
       {img:'/Images/Onboarding/Image-5.png',
        name:'Jollof Delights',
-       id:5
+       id:19
       },
       {img:'/Images/Onboarding/Image-6.png',
        name:'Jollof Delights',
-       id:6
+       id:20
       }
     ]
 
@@ -43,7 +43,7 @@ const HomePage = () => {
       {img:'/Images/Onboarding/Image-7.png',
        name:'Spicy Tilapia Pepper Soup',
        description:'A comforting and spicy soup with tender tilapia fish, a true Nigerian delicacy.',
-       id:1,
+       id:21,
        price:3500,
        btnText:'Add to Cart',
        btnVariant:'text'
@@ -51,7 +51,7 @@ const HomePage = () => {
       {img:'/Images/Onboarding/Image-8.png',
        name:'Jollof Rice And Fried Chicken',
        description:'Our signature Jollof rice, cooked to perfection , serve with succulent fried chicken.',
-       id:2,
+       id:22,
        price:3500,
        btnText:'Add to Cart',
        btnVariant:'text'
@@ -59,7 +59,7 @@ const HomePage = () => {
       {img:'/Images/Onboarding/Image-8.png',
        name:'Jollof Rice And Fried Chicken',
        description:'Our signature Jollof rice, cooked to perfection , serve with succulent fried chicken.',
-       id:3,
+       id:23,
        price:3500,
        btnText:'Add to Cart',
        btnVariant:'text'
@@ -67,7 +67,7 @@ const HomePage = () => {
       {img:'/Images/Onboarding/Image-8.png',
        name:'Jollof Rice And Fried Chicken',
        description:'Our signature Jollof rice, cooked to perfection , serve with succulent fried chicken.',
-       id:4,
+       id:24,
        price:3500,
        btnText:'Add to Cart',
        btnVariant:'text'
@@ -75,7 +75,7 @@ const HomePage = () => {
       {img:'/Images/Onboarding/Image-8.png',
        name:'Jollof Rice And Fried Chicken',
        description:'Our signature Jollof rice, cooked to perfection , serve with succulent fried chicken.',
-       id:5,
+       id:25,
        price:3500,
        btnText:'Add to Cart',
        btnVariant:'text'
@@ -83,7 +83,7 @@ const HomePage = () => {
       {img:'/Images/Onboarding/image-9.png',
        name:'Egusi Soup & Pounded Yam',
        description:'Rich and savory Egusi soup with assorted meats, paired with freshly pounded yam.',
-       id:6,
+       id:26,
        price:3500,
        btnText:'Add to Cart',
        btnVariant:'text'
