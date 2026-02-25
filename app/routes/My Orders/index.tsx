@@ -17,7 +17,6 @@ const MyOrdersPage = () => {
                     <div className='grid grid-cols-1 w-full place-items-center sm:space-x-4 space-y-8 sm:space-y-0 sm:grid-cols-3 items-center'>
                         <div className="col-span-1 px-4 w-full text-center">
                             <p className='font-semibold md:font-bold  text-sm md:text-lg'>{item.name}</p>
-                            <p className="text-gray-500 mt-1 text-sm md:text-md">{item.description?.split(' ')[0]}</p>
                         </div>
                         <div className="flex items-center col-span-1 md:gap-18 gap-14 text-sm md:text-md">
                             <span className='block p-1 bg-gray-300 rounded-lg cursor-pointer' onClick={()=>addItem(item)}>

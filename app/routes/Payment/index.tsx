@@ -10,27 +10,25 @@ const PaymentPage = () => {
         <section className="py-20 px-6 min-h-screen bg-gray-200">
             <div className="bg-white max-w-4xl mx-auto rounded-md px-4 py-4">
                 <h2 className="font-bold mb-6 text-xl">Payment <hr className="w-full mt-1 text-gray-300"></hr></h2>
-                <h3 className="font-semibold mb-3">Pay With:</h3>
-                <div className="flex w-full mb-6">
-                    <div className="w-[33.3%] flex gap-1 items-center">
-                        <input type="radio" name="paymentMethod"  className="rounded-full cursor-pointer accent-green-300" />
-                        <p className="text-gray-400">Card</p>
-                    </div>
-                     <div className="w-[33.3%] flex gap-1 items-center">
-                        <input type="radio" name="paymentMethod"  className="rounded-full cursor-pointer accent-green-300" />
-
-                        <p className="text-gray-400">Bank</p>
-                    </div>
-                     <div className="w-[33.3%] flex gap-1 items-center">
-                        <input type="radio" name="paymentMethod"  className="rounded-full cursor-pointer accent-green-300" />
-
-                        <p className="text-gray-400">Transfer</p>
-                    </div>
-                </div>
                 <form onSubmit={(e)=>{
                 e.preventDefault()
                 navigate('/order-confirmation')}
                 } className="block">
+                <h3 className="font-semibold mb-3">Pay With:</h3>
+                <div className="flex w-full mb-6">
+                    <div className="w-[33.3%] flex gap-1 items-center">
+                        <input type="radio" required name="paymentMethod"  className="rounded-full cursor-pointer accent-green-300" />
+                        <p className="text-gray-400">Card</p>
+                    </div>
+                     <div className="w-[33.3%] flex gap-1 items-center">
+                        <input type="radio" required name="paymentMethod"  className="rounded-full cursor-pointer accent-green-300" />
+                        <p className="text-gray-400">Bank</p>
+                    </div>
+                     <div className="w-[33.3%] flex gap-1 items-center">
+                        <input type="radio" required name="paymentMethod"  className="rounded-full cursor-pointer accent-green-300" />
+                        <p className="text-gray-400">Transfer</p>
+                    </div>
+                </div>
                     <label className="font-semibold">Card Number</label>
                     <input required type="number" className="w-full p-2 border mt-3 mb-3 border-gray-400 focus:ring-2 focus:border-0 focus:ring-[#FF7A11] outline-0 rounded-md placeholder:text-gray-400" placeholder="1234 5678 9101 11121"/>
                     <div className="flex w-full gap-3 justify-between mb-3">
@@ -44,7 +42,7 @@ const PaymentPage = () => {
                         </div>
                     </div>
                     <div className="flex gap-3 mb-6 items-center">
-                        <input type="checkbox" required className="cursor-pointer"/>
+                        <input type="checkbox" className="cursor-pointer"/>
                         <p className="text-gray-400">Save card details</p>
                     </div>
                     <button type="submit" className='w-full cursor-pointer text-white py-2 px-6 rounded-md bg-[#FF7A18] text-center'>Pay ₦{(subTotalPrice > 0 && totalPrice) || 0}</button>

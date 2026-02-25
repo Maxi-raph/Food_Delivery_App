@@ -2,14 +2,17 @@ import type React from "react";
 import { Link, useNavigate } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
+import { useLogin } from "~/Context/LoginContext";
 
 
 const LogInPage = () => {
      const navigate = useNavigate()
+     const {setIsLoggedIn} = useLogin()
 
     //Function that navigates you to the Home page
     const handleSubmit = (e:React.SyntheticEvent<HTMLFormElement>)=>{
         e.preventDefault()
+        setIsLoggedIn(prev => true)
         navigate('/home')
     }
 
@@ -41,7 +44,7 @@ const LogInPage = () => {
         <form onSubmit={(e)=>handleSubmit(e)} className="mt-2 max-w-lg mx-auto">
             <div className="mb-4">
                 <label htmlFor='email' className="text-gray-800">Email</label>
-                <input type="text" name="email" required className="w-full block mt-2 p-2 rounded-md border-2 border-gray-300" placeholder="name@gmail.com"/>
+                <input type="email" name="email" required className="w-full block mt-2 p-2 rounded-md border-2 border-gray-300" placeholder="name@gmail.com"/>
             </div>
             <div className="mb-4">
                 <label htmlFor='password' className="text-gray-800">Password</label>

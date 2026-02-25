@@ -10,6 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import { CartProvider } from "./Context/CartContext";
+import { LoginProvider } from "./Context/LoginContext";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -51,8 +52,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return <CartProvider>
-      <Outlet />
-    </CartProvider>
+         <LoginProvider>
+            <Outlet />
+         </LoginProvider>
+         </CartProvider>
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

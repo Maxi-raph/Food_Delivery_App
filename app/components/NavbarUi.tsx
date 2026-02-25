@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { Link, NavLink } from 'react-router'
+import { useLogin } from '~/Context/LoginContext'
 
 const Nav = () => {
     const [isNavOpen,setIsNavOpen] = useState(false)
+    const {isLoggedIn} = useLogin()
     const showNav = ()=>{
         setIsNavOpen(prev=>!prev)
     }
@@ -33,8 +35,8 @@ const Nav = () => {
                     ? 'text-[#FF7A18]'
                     : 'hover:text-[#FF7A18]'
                 )}>Account</NavLink>
-            </div>
-            <Link to={'/onboarding/login'} className='text-white py-1 px-6 rounded-md bg-[#FF7A18]'>Login</Link>
+            </div> 
+            <Link to={'/onboarding/login'} className={`${isLoggedIn ? 'hidden' : 'block'} text-white py-1 px-6 rounded-md bg-[#FF7A18]`}>Login</Link>
         </div>
         {/* Mobile Navigation */} 
         <div className='flex md:hidden py-3 px-6 justify-between items-center fixed bg-white w-full top-0 left-0 z-24 shadow-xl'>
@@ -43,7 +45,6 @@ const Nav = () => {
             ? <HiMenu  size={24} className={`cursor-pointer `} onClick={()=>showNav()}/>
             : <HiX  size={24} className={`cursor-pointer `} onClick={()=>showNav()}/>
             }
-            
                 <div className={`p-6 w-full shadow-xl bg-gray-300/30 backdrop-blur-sm absolute z-10 top-14 right-0
                     transition-translate duration-600 ${!isNavOpen ? '-translate-y-100' : 'translate-y-0'}`}>
                     <div className='flex w-full flex-col items-center space-y-6'>
@@ -67,8 +68,8 @@ const Nav = () => {
                             ? 'text-[#FF7A18]'
                             : 'hover:text-[#FF7A18] text-white'
                         )} onClick={()=>showNav()}>Account</NavLink>
-                        <Link to={'/onboarding/login'} className='text-white py-1 px-6 rounded-md
-                         bg-[#FF7A18] hover:bg-[#ff6702] text-center w-64'>
+                        <Link to={'/onboarding/login'} className={`${isLoggedIn ? 'hidden' : 'block'} text-white py-1 px-6 rounded-md
+                         bg-[#FF7A18] hover:bg-[#ff6702] text-center w-64`}>
                         Login</Link>
                     </div>
                 </div>

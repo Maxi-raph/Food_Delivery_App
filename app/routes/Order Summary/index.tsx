@@ -1,9 +1,11 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router";
 import { useCart } from "~/Context/CartContext";
+import { useLogin } from "~/Context/LoginContext";
 
 const OrderSummary = () => {
-    const {serviceFee, deliveryFee, subTotalPrice} = useCart()   
+    const {serviceFee, deliveryFee, subTotalPrice} = useCart() 
+    const {isLoggedIn} = useLogin()  
     const tax= 0
     const [isClicked,setIsClicked] = useState(false)
     return ( 
@@ -13,8 +15,8 @@ const OrderSummary = () => {
                 <h2 className="font-bold mb-6 text-xl">Order Summary <hr className="w-full mt-1 text-gray-300"></hr></h2>
                 <h3 className="mb-1 font-semibold">Add a Promo Code</h3>
                 <div className="flex w-full space-x-3 items-center mb-6">
-                    <input type="text" className="w-[80%] p-2 border border-gray-400 focus:ring-2 focus:border-0 focus:ring-[#FF7A11] outline-0 rounded-md placeholder:text-gray-400" placeholder="Enter code here"/>
-                    <Link to={'/onboarding/login'} className='w-[20%] text-white py-2 px-6 rounded-md bg-[#FF7A18] flex justify-center items-center'>Login</Link>
+                    <input type="text" className={`${isLoggedIn ? 'w-full' : 'w-[80%]'} p-2 border border-gray-400 focus:ring-2 focus:border-0 focus:ring-[#FF7A11] outline-0 rounded-md placeholder:text-gray-400`} placeholder="Enter code here"/>
+                    <Link to={'/onboarding/login'} className={`${isLoggedIn ? 'hidden' : 'flex' } w-[20%] text-white py-2 px-6 rounded-md bg-[#FF7A18] justify-center items-center`}>Login</Link>
                 </div>
                 <div className="flex justify-between items-center mb-3">
                     <p className="text-gray-400">Subtotal</p>
