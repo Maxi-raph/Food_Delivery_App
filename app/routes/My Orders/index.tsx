@@ -14,12 +14,12 @@ const MyOrdersPage = () => {
             {items.map(item =>(
                 <motion.div layout className='border border-gray-300 flex items-center space-x-3 px-2 py-1 w-full mb-3 rounded-md'>   
                     <img src={item.img} alt="" className='w-27 h-29 md:w-30 md:h-27 rounded-lg'/>
-                    <div className='grid grid-cols-1 w-full place-items-center space-x-4 space-y-8 sm:space-y-0 sm:grid-cols-3 items-center'>
+                    <div className='grid grid-cols-1 w-full place-items-center sm:space-x-4 space-y-8 sm:space-y-0 sm:grid-cols-3 items-center'>
                         <div className="col-span-1 px-4 w-full text-center">
                             <p className='font-semibold md:font-bold  text-sm md:text-lg'>{item.name}</p>
                             <p className="text-gray-500 mt-1 text-sm md:text-md">{item.description?.split(' ')[0]}</p>
                         </div>
-                        <div className="flex col-span-1 px-4 md:gap-18 gap-12 text-sm md:text-md">
+                        <div className="flex items-center col-span-1 md:gap-18 gap-14 text-sm md:text-md">
                             <span className='block p-1 bg-gray-300 rounded-lg cursor-pointer' onClick={()=>addItem(item)}>
                                 <HiPlus />
                             </span>
@@ -28,7 +28,7 @@ const MyOrdersPage = () => {
                                 <HiMinus />
                             </span>
                         </div>
-                        <div className="flex col-span-1 justify-between px-2 w-full text-sm md:text-md">
+                        <div className="flex col-span-1 justify-between px-3 w-full text-sm md:text-md">
                             <p className="text-[#FF7A18] font-semibold">{item.price && item.quantity && `₦${(item.price * item.quantity).toLocaleString()}`}</p>
                             <span className='block p-1 bg-[#FF7A11]' onClick={()=>removeItem(item.id)}>
                                 <HiX className="text-white cursor-pointer"/>

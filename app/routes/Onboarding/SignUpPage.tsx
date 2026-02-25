@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router";
-
+import { FcGoogle } from "react-icons/fc";
+import { FaApple } from "react-icons/fa";
 
 const SignUpPage = () => {
+
+
     const navigate = useNavigate()
     //Function that navigates you to the login page upon submission
     const handleSubmit = (e:React.SyntheticEvent<HTMLFormElement>)=>{
@@ -19,12 +22,12 @@ const SignUpPage = () => {
         <h1 className="mt-2 text-gray-700 font-semibold text-2xl text-center mb-8">Create Your Account</h1>
         <div className="max-w-lg mx-auto mt-6">
         <button className="w-full p-3 text-center border-2 border-gray-300 text-gray-700 rounded-md cursor-pointer hover:bg-gray-50 transition flex items-center justify-center gap-2">
-            <img src="/Images/Onboarding/google-icon.svg" alt="Google" className="w-5 h-5" />
+            <FcGoogle className="w-5 h-5" />
             Continue with Google
         </button>
         
         <button className="w-full p-3 text-center border-2 border-gray-300 text-gray-700 rounded-md cursor-pointer hover:bg-gray-50 transition mt-4 flex items-center justify-center gap-2">
-            <img src="/Images/Onboarding/apple-icon.svg" alt="Apple" className="w-5 h-5" />
+            <FaApple className="w-5 h-5" />
             Continue with Apple
         </button>
         
