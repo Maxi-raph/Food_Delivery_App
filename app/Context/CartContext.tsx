@@ -17,8 +17,9 @@ type CartContextType = {
   removeItem: (id: number) => void;
   decreaseQuantity: (id: number) => void;
   clearCart: () => void;
-  totalItems: number;
-  totalPrice: number;
+  deliveryFee: number;
+  subTotalPrice: number;
+  serviceFee: number;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -63,10 +64,11 @@ export  const CartProvider = ({children}:CartProviderProps) => {
     const clearCart = () => {
       setItems([]);
     }
-    const totalItems = items.reduce((total, item) => total + (item.quantity || 0), 0);
-    const totalPrice = items.reduce((total, item) => total + (item.price||0 * (item.quantity || 0)), 0);
+    const subTotalPrice = items.reduce((total, item) => total + (item.price||0) * (item.quantity || 0), 0);
+    const deliveryFee = 500
+    const serviceFee = 200
     return (
-      <CartContext.Provider value={{items, addItem, decreaseQuantity, removeItem, clearCart, totalItems, totalPrice}}>
+      <CartContext.Provider value={{items, addItem, decreaseQuantity, removeItem, clearCart, subTotalPrice, deliveryFee, serviceFee}}>
         {children}
       </CartContext.Provider>
     )       

@@ -1,0 +1,16 @@
+0000000000000000000000000000000000000000 9e93e701e7c3e73a05ecb91866820c56059a53ff Raph <onwujekwechibuzor@gmail.com> 1771863374 +0100	commit (initial): did the dropdown for the menu categories
+9e93e701e7c3e73a05ecb91866820c56059a53ff 00a9238ab51ec13652e55b19e145ab9898333e38 Raph <onwujekwechibuzor@gmail.com> 1771874523 +0100	commit: added the show more buttons logic on the home page to declutter the screen
+00a9238ab51ec13652e55b19e145ab9898333e38 0503df2ea037ec9a0357a266739d8bd78f4e609a Raph <onwujekwechibuzor@gmail.com> 1771886139 +0100	commit: i added logic to the menu categories so that selecting a categgory shows items that
+0503df2ea037ec9a0357a266739d8bd78f4e609a e320f94aaa68c9da2773a019886e39c4fd94295c Raph <onwujekwechibuzor@gmail.com> 1771961818 +0100	commit: i got started on the my orders page
+e320f94aaa68c9da2773a019886e39c4fd94295c 63a25fe278f4b26041774b4c4aeff86465bc5e83 Raph <onwujekwechibuzor@gmail.com> 1771962127 +0100	commit: fixed footer padding
+63a25fe278f4b26041774b4c4aeff86465bc5e83 0881181d33f6b9dd7b01662f0953f30a1bb9c28f Raph <onwujekwechibuzor@gmail.com> 1771981912 +0100	commit: designed orders page
+0881181d33f6b9dd7b01662f0953f30a1bb9c28f 827f150f41ea41773cac60e6a15f8c2f4ddc7e86 Raph <onwujekwechibuzor@gmail.com> 1772020989 +0100	commit: styled the my orders page ui more effectively
+827f150f41ea41773cac60e6a15f8c2f4ddc7e86 48d1b0eff3e22b041021ed16bad30666a99cefda Raph <onwujekwechibuzor@gmail.com> 1772021346 +0100	commit: styled the my orders page ui more effectively
+48d1b0eff3e22b041021ed16bad30666a99cefda 94b34e52f67aae5e8c5980f260f0f8d90c8f2f76 Raph <onwujekwechibuzor@gmail.com> 1772021553 +0100	commit: styled the my orders page ui more effectively
+94b34e52f67aae5e8c5980f260f0f8d90c8f2f76 4e52f7a72733ea8ec0b8b5cea3447564133133b3 Raph <onwujekwechibuzor@gmail.com> 1772024316 +0100	commit: styled the my orders page ui more effectively
+4e52f7a72733ea8ec0b8b5cea3447564133133b3 7552d8ba2d824992d336a0a17b2d88852ad60127 Raph <onwujekwechibuzor@gmail.com> 1772026905 +0100	commit: styled the my orders page ui more effectively
+7552d8ba2d824992d336a0a17b2d88852ad60127 7fb1c6f25d6466e22532dac6d55c4ccb2f8d3d4c Raph <onwujekwechibuzor@gmail.com> 1772032473 +0100	commit: i styled the order summary page
+7fb1c6f25d6466e22532dac6d55c4ccb2f8d3d4c e655fcfae2f1a184179ed4222f82ac80808d68b7 Raph <onwujekwechibuzor@gmail.com> 1772032721 +0100	commit: i made corrections on the padding on the login and code input in the order summary page
+e655fcfae2f1a184179ed4222f82ac80808d68b7 5cffafc16716a69852e3b99048e15edca9e2dccd Raph <onwujekwechibuzor@gmail.com> 1772035790 +0100	commit: i styled the checkout page
+5cffafc16716a69852e3b99048e15edca9e2dccd 5eb97d73af152656a9d8776484b8bb85f82cfa19 Raph <onwujekwechibuzor@gmail.com> 1772035925 +0100	commit: i styled the checkout page
+5eb97d73af152656a9d8776484b8bb85f82cfa19 f04b1bfd6ecd09f9fb2a865286868fc65822ed55 Raph <onwujekwechibuzor@gmail.com> 1772035994 +0100	commit: i styled the checkout page

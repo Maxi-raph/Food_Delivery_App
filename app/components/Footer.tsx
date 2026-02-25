@@ -38,7 +38,7 @@ const Footer = ({isAuthPage, scrollHeight}:FooterProps) => {
             </div>
             <div className="mt-12">
                         <div className="flex w-full h-px rounded-md bg-gray-300"></div>
-                        <div className="grid grid-flow-col  auto-cols-max justify-between mt-4 text-sm text-white px-4">
+                        <div className="grid grid-flow-col  auto-cols-max justify-between mt-4 text-xs text-white px-4">
                             <span>© 2024 Chuks Kitchen</span>
                             <a href="#" className="text-blue-400">Privacy Policy</a>
                             <a href="#" className="text-blue-400">Terms of Service</a>

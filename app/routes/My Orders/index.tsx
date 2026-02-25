@@ -1,24 +1,25 @@
 import { useCart } from "~/Context/CartContext";
 import { AnimatePresence, motion } from "framer-motion";
 import { HiMinus, HiPlus, HiX } from "react-icons/hi";
+import { Link } from "react-router";
 
 
 const MyOrdersPage = () => {
-    const {items,addItem, decreaseQuantity,removeItem} = useCart()
+    const {items,addItem, decreaseQuantity,removeItem, subTotalPrice} = useCart()
     return ( 
     <>
-    <section className="py-20 px-8 min-h-screen bg-gray-200">
+    <section className="py-20 px-6 min-h-screen bg-gray-200">
         <div className="bg-white w-full rounded-md px-2 py-2">
             <h1 className="text-xl font-bold mb-4">Your Cart</h1>
             {items.map(item =>(
-                <motion.div layout className='border border-gray-300 flex items-center space-x-3 px-2 py-1 w-full mb-2 rounded-md'>   
-                    <img src={item.img} alt="" className='w-30 h-27 rounded-lg'/>
-                    <div className='flex-1 grid grid-cols-1  place-items-center gap-4 md:grid-cols-3 items-center'>
-                        <div>
-                            <p className='font-bold md:text-lg  text-md'>{item.name}</p>
-                            <p className="text-gray-500 mt-1">{item.description?.split(' ')[0]}</p>
+                <motion.div layout className='border border-gray-300 flex items-center space-x-3 px-2 py-1 w-full mb-3 rounded-md'>   
+                    <img src={item.img} alt="" className='w-27 h-29 md:w-30 md:h-27 rounded-lg'/>
+                    <div className='grid grid-cols-1 w-full place-items-center space-x-4 space-y-8 sm:space-y-0 sm:grid-cols-3 items-center'>
+                        <div className="col-span-1 px-4 w-full text-center">
+                            <p className='font-semibold md:font-bold  text-sm md:text-lg'>{item.name}</p>
+                            <p className="text-gray-500 mt-1 text-sm md:text-md">{item.description?.split(' ')[0]}</p>
                         </div>
-                        <div className="flex space-x-18 text-lg">
+                        <div className="flex col-span-1 px-4 md:gap-18 gap-12 text-sm md:text-md">
                             <span className='block p-1 bg-gray-300 rounded-lg cursor-pointer' onClick={()=>addItem(item)}>
                                 <HiPlus />
                             </span>
@@ -27,8 +28,8 @@ const MyOrdersPage = () => {
                                 <HiMinus />
                             </span>
                         </div>
-                        <div className="flex justify-between items-center w-full">
-                            <p className="text-[#FF7A18] font-semibold">{item.price && item.quantity && (item.price * item.quantity)}</p>
+                        <div className="flex col-span-1 justify-between px-2 w-full text-sm md:text-md">
+                            <p className="text-[#FF7A18] font-semibold">{item.price && item.quantity && `₦${(item.price * item.quantity).toLocaleString()}`}</p>
                             <span className='block p-1 bg-[#FF7A11]' onClick={()=>removeItem(item.id)}>
                                 <HiX className="text-white cursor-pointer"/>
                             </span>
@@ -36,9 +37,22 @@ const MyOrdersPage = () => {
                     </div>
                 </motion.div>
             ))}
+            {items.length > 0 && (
+                <div className="flex justify-between mt-6 mb-4 px-4">
+                    <p className="text-[#FF7A18] font-bold">Estimated Total:</p>
+                    <p className="text-[#FF7A18] font-bold">₦{subTotalPrice}</p>
+                </div>
+            )}
             {items.length <= 0 && (
                 <p className="text-center mt-4 text-gray-400">No dish has been added to your cart yet... </p>
             )}
+        </div>
+        <div className="bg-white w-full rounded-md px-4 py-4 mt-6 flex flex-col md:flex-row gap-4 justify-between">
+            {items.length > 0 && (
+                <Link to={'/my-orders-summary'}className="text-white px-4 py-2 w-50 bg-[#FF7A11] rounded-md text-center">Place Your Order</Link>
+            )}
+            <Link to={'/explore'} className="text-blue-400 flex items-center"><HiPlus className="mr-2 inline"/> Add more items from Chuks Kitchen</Link>
+
         </div>
     </section>
     

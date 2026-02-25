@@ -10,7 +10,9 @@ route("/onboarding", "routes/Onboarding/index.tsx",[
 layout('Layout/Main.tsx',[
     route("/home", "routes/Home/index.tsx"),
     route("/explore", "routes/Explore/index.tsx"),
-    route("/my-orders", "routes/My Orders/index.tsx")
-
+    route("/my-orders", "routes/My Orders/index.tsx"),
+    route("/my-orders-summary", "routes/Order Summary/index.tsx"),    
+    route("/checkout", "routes/Payment/index.tsx"),    
+    route("/order-confirmation", "routes/Order Confirmation/index.tsx"),    
 ])
 ] satisfies RouteConfig;
