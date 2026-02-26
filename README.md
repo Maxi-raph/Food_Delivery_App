@@ -1,87 +1,69 @@
-# Welcome to React Router!
+﻿# Food Delivery App
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A mobile-friendly React web application for browsing food, managing a cart, checking out, and viewing a friendly order confirmation. Built with React Router v7 (SSR support), TypeScript, Vite, and Tailwind CSS. The app entry and providers live under app/.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Live Demo
+
+https://food-delivery-app-pearl-three.vercel.app/
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- Browse food items with images and details.
+- Add, remove, decrease quantity, and clear cart via CartContext.
+- Checkout flow and order confirmation screen.
+- Responsive layout with Navbar, Footer, and animated page transitions.
 
-## Getting Started
+## Installation
 
-### Installation
-
-Install the dependencies:
+Follow these steps to run the project locally.
 
 ```bash
+# clone the repo
+git clone <repo-url>
+cd Food_Delivery_App
+
+# install dependencies
 npm install
-```
 
-### Development
-
-Start the development server with HMR:
-
-```bash
+# start dev server (HMR)
 npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
+Build & Production
+bash
 npm run build
-```
+npm run start
+A Dockerfile for building a production image is present in the repository.
 
-## Deployment
+Project Structure
+The app uses React Router v7 for routing with the entry point in app/root.tsx. The CartContext implements cart operations and fees. The Main layout handles loading and animated transitions.
 
-### Docker Deployment
+Tech Stack
+React (v19) and TypeScript
 
-To build and run using Docker:
+React Router v7 for routing and SSR
 
-```bash
-docker build -t my-app .
+Tailwind CSS for styling
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
+Vite for dev and building
 
-The containerized application can be deployed to any platform that supports Docker, including:
+Key Files
+app/root.tsx - Root component, providers (CartProvider, LoginProvider), and ErrorBoundary
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+app/context/CartContext.tsx - Cart provider, addItem/removeItem/decreaseQuantity, fees, subTotalPrice
 
-### DIY Deployment
+app/Layout/Main.tsx - Main layout with loading spinner and animated transitions
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+package.json - scripts and dependencies
 
-Make sure to deploy the output of `npm run build`
+Dockerfile - multi-stage Docker build
 
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
+Usage
+Browse menu items and add them using MenuCard components
 
-## Styling
+Manage cart in My Orders
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Proceed to Checkout to reach Payment and Order Confirmation pages
 
----
+Access cart and auth state via useCart() and useLogin() hooks
 
-Built with ❤️ using React Router.
+Error handling & SSR
+The app includes an ErrorBoundary that handles route errors. The project uses React Router's SSR/dev tooling by configuration.
