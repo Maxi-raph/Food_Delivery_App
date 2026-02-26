@@ -67,3 +67,17 @@ Access cart and auth state via useCart() and useLogin() hooks
 
 Error handling & SSR
 The app includes an ErrorBoundary that handles route errors. The project uses React Router's SSR/dev tooling by configuration.
+
+## 🎨 Design Improvements
+
+To elevate the onboarding experience, I refined the original mobile layout by strategically repositioning three key elements: the hero image, brand logo, and primary call-to-action button.
+
+These adjustments establish a clearer visual hierarchy, guide the user’s attention more naturally, and improve overall flow from first glance to interaction.
+
+### Key Enhancements:
+- **Hero image repositioned** – Creates stronger visual framing and immediate engagement  
+- **Logo placement optimized** – Maintains brand presence without competing with core content  
+- **Primary button relocated** – Improves reachability and strengthens the call-to-action  
+
+Though subtle, these refinements significantly enhance usability, balance, and perceived product polish.
+
