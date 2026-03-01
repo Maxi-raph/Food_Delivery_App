@@ -11,6 +11,7 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import { CartProvider } from "./Context/CartContext";
 import { LoginProvider } from "./Context/LoginContext";
+import { NavProvider } from "./Context/NavContext";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -53,7 +54,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return <CartProvider>
          <LoginProvider>
+         <NavProvider>
             <Outlet />
+         </NavProvider>
          </LoginProvider>
          </CartProvider>
 }

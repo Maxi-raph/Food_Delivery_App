@@ -2,13 +2,12 @@ import { useState } from 'react'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { Link, NavLink } from 'react-router'
 import { useLogin } from '~/Context/LoginContext'
+import { useNav } from '~/Context/NavContext'
 
 const Nav = () => {
-    const [isNavOpen,setIsNavOpen] = useState(false)
+    
     const {isLoggedIn} = useLogin()
-    const showNav = ()=>{
-        setIsNavOpen(prev=>!prev)
-    }
+    const { isNavOpen ,showNav } = useNav()
 
     return (<>
         {/* Desktop Navigation */} 
