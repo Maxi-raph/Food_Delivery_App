@@ -45,7 +45,7 @@ const Nav = () => {
             ? <HiMenu  size={24} className={`cursor-pointer `} onClick={()=>showNav()}/>
             : <HiX  size={24} className={`cursor-pointer `} onClick={()=>showNav()}/>
             }
-                <div className={`p-6 w-full shadow-xl bg-gray-300/30 backdrop-blur-sm absolute z-10 top-14 right-0
+                <div className={`p-6 w-full shadow-xl bg-gray-500/30 backdrop-blur-sm absolute z-10 top-14 right-0
                     transition-translate duration-600 ${!isNavOpen ? '-translate-y-100' : 'translate-y-0'}`}>
                     <div className='flex w-full flex-col items-center space-y-6'>
                         <NavLink to={'/home'} className={({isActive})=>(

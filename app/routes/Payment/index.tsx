@@ -45,7 +45,7 @@ const PaymentPage = () => {
                         <input type="checkbox" className="cursor-pointer"/>
                         <p className="text-gray-400">Save card details</p>
                     </div>
-                    <button type="submit" className='w-full cursor-pointer text-white py-2 px-6 rounded-md bg-[#FF7A18] text-center'>Pay ₦{(subTotalPrice > 0 && totalPrice) || 0}</button>
+                    <button type="submit" className='w-full cursor-pointer text-white py-2 px-6 rounded-md bg-[#FF7A18] text-center'>Pay ₦{(subTotalPrice > 0 && totalPrice.toLocaleString()) || 0}</button>
                 </form>
                     <p className="text-gray-400 mt-4 mb-2 text-sm">Your personal data will be used to process your order,support your experience
                         throughout this website, and for other purposes described in our privacy policy.

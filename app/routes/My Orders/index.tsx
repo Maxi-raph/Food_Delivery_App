@@ -39,7 +39,7 @@ const MyOrdersPage = () => {
             {items.length > 0 && (
                 <div className="flex justify-between mt-6 mb-4 px-4">
                     <p className="text-[#FF7A18] font-bold">Estimated Total:</p>
-                    <p className="text-[#FF7A18] font-bold">₦{subTotalPrice}</p>
+                    <p className="text-[#FF7A18] font-bold">₦{subTotalPrice.toLocaleString()}</p>
                 </div>
             )}
             {items.length <= 0 && (
